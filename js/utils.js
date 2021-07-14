@@ -55,10 +55,12 @@ function updateMusicSlider() {
     }
 
     // for duration
-    if (durationSec < 10) {
-      endTime.innerHTML = `0${durationMin}:0${durationSec}`;
-    } else {
-      endTime.innerHTML = `0${durationMin}:${durationSec}`;
+    if (durationSec != NaN) {
+      if (durationSec < 10) {
+        endTime.innerHTML = `0${durationMin}:0${durationSec}`;
+      } else {
+        endTime.innerHTML = `0${durationMin}:${durationSec}`;
+      }
     }
   } else {
     resetMusicTimer();
